@@ -27,14 +27,4 @@ public class DegenCore {
     }
 
     private void setup(final FMLCommonSetupEvent event) {}
-
-    private static class ItemReg extends ItemRegistry {
-        @Override
-        public void register(IEventBus bus) {
-            registerRegistry(DegenCore.ID);
-
-            registerCustomizedItem("e", () -> new BlockItem(Blocks.CHAIN, new Item.Properties()));
-            super.register(bus);
-        }
-    }
 }
