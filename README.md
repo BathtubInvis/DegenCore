@@ -15,9 +15,9 @@ repositories {
         }
     }
 
-    implementation("me.filthyWeebDegenerate.degenerateCore:degen-core:${project.degenCoreVersion}") {
-        exclude group: 'net.minecraftforge'
-    }
+implementation("me.filthyWeebDegenerate.degenerateCore:degen-core:${project.degenCoreVersion}") {
+    exclude group: 'net.minecraftforge'
+}
 ```
 
 ### gradle.properties
