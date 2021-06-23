@@ -168,8 +168,8 @@ jar {
 publishing {
     repositories {
         maven {
-            name = "degenerate_core"
-            url = uri("https://maven.pkg.github.com/BathtubInvis/DegenCore-MVN")
+            name = "DegenerateCore"
+            url = uri("https://maven.pkg.github.com/BathtubInvis/DegenCore")
             credentials {
                 username = System.getenv("USERNAME")
                 password = System.getenv("TOKEN")
@@ -179,7 +179,7 @@ publishing {
 
     publications {
         version(MavenPublication) {
-            artifactId = "degen_core"
+            artifactId = "degen-core"
             from(components.java)
         }
     }
