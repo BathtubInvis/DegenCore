@@ -12,9 +12,10 @@ buildscript {
 
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
+apply plugin: 'maven-publish'
 
 group = 'me.filthyWeebDegenerate.degenerateCore'
-version = '1.0.0'
+version = '0.0.2'
 archivesBaseName = 'DegenCore'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
@@ -161,6 +162,26 @@ jar {
                 "MixinConfigs"            : "DegenCore.mixins.json",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "degenerate_core"
+            url = uri("https://maven.pkg.github.com/BathtubInvis/DegenCore-MVN")
+            credentials {
+                username = System.getenv("USERNAME")
+                password = System.getenv("TOKEN")
+            }
+        }
+    }
+
+    publications {
+        version(MavenPublication) {
+            artifactId = "degen_core"
+            from(components.java)
+        }
     }
 }
 
