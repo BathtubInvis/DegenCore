@@ -15,7 +15,7 @@ apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'maven-publish'
 
 group = 'me.filthyWeebDegenerate.degenerateCore'
-version = '0.0.2'
+version = '0.0.3'
 archivesBaseName = 'DegenCore'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
