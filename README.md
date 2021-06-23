@@ -1,8 +1,8 @@
-### DegenCore
+# DegenCore
 A simple minecraft API to help with forge modding
 
 ## How To Use DegenCore (DegenerateCore) In Your Projects
-# Add the following to your 'build.gradle'
+### Add the following to your 'build.gradle'
 
 ```gradle
 repositories {
