@@ -2,8 +2,8 @@
 A simple minecraft API to help with forge modding
 
 ## How To Use DegenCore (DegenerateCore) In Your Projects
-### Add the following to your 'build.gradle'
 
+### build.gradle dependencies block
 ```gradle
 repositories {
         maven {
@@ -15,7 +15,13 @@ repositories {
         }
     }
 
-    implementation('me.filthyWeebDegenerate.degenerateCore:degen-core:1.1.0') {
+    implementation("me.filthyWeebDegenerate.degenerateCore:degen-core:${project.degenCoreVersion}") {
         exclude group: 'net.minecraftforge'
     }
+```
+
+### gradle.properties
+
+```properties
+degenCoreVersion=desiredVersion
 ```
