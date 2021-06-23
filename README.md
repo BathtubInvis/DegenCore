@@ -23,5 +23,5 @@ repositories {
 ### gradle.properties
 
 ```properties
-degenCoreVersion=desiredVersion
+degenCoreVersion=desiredVersion (e.g. 1.1.0)
 ```
