@@ -4,7 +4,7 @@ A simple minecraft API to help with forge modding
 ## How To Use DegenCore (DegenerateCore) In Your Projects
 
 ### build.gradle dependencies block
-```gradle
+```groovy
 repositories {
     maven {
         url = uri("https://maven.pkg.github.com/BathtubInvis/DegenCore")
