@@ -16,7 +16,7 @@ public class BlockRegistry {
         BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, modID);
     }
 
-    protected <I extends Block> RegistryObject<I> registerCustomizedBlock(String name, Supplier<I> supplier) {
+    protected <I extends Block> RegistryObject<Block> registerCustomizedBlock(String name, Supplier<I> supplier) {
         return BLOCKS.register(name, supplier);
     }
 
@@ -24,7 +24,5 @@ public class BlockRegistry {
         return BLOCKS.register(name, supplier);
     }
 
-    public void register(IEventBus bus) {;
-        BLOCKS.register(bus);
-    }
+    public void register() {}
 }

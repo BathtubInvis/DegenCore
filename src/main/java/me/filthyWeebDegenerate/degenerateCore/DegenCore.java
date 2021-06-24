@@ -1,9 +1,5 @@
 package me.filthyWeebDegenerate.degenerateCore;
 
-import me.filthyWeebDegenerate.degenerateCore.API.ItemRegistry;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;

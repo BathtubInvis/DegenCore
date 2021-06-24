@@ -4,8 +4,8 @@ import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 
-public interface IArmorModelEnum {
+public interface IArmorModelEnum<I extends BipedModel<LivingEntity>> {
     EquipmentSlotType getSlot();
-    BipedModel<LivingEntity> getOtherArmorSlotModel();
-    BipedModel<LivingEntity> getCorrespondingArmorSlotModel();
+    I getOtherArmorSlotModel();
+    I getCorrespondingArmorSlotModel();
 }

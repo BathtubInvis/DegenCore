@@ -3,7 +3,16 @@ package me.filthyWeebDegenerate.degenerateCore.API.armor;
 import net.minecraft.inventory.EquipmentSlotType;
 
 public class ArmorModelRequester {
-    protected <A> A getArmorModel(IArmorModelEnum armorEnum, EquipmentSlotType correspondingSlot) {
-        return (A) (armorEnum.getSlot() == correspondingSlot ? armorEnum.getCorrespondingArmorSlotModel() : armorEnum.getOtherArmorSlotModel());
+    private final IArmorModelEnum<?> armorModelEnum;
+    private final EquipmentSlotType correspondingSlot;
+
+    public ArmorModelRequester(IArmorModelEnum<?> armorModelEnum, EquipmentSlotType slot) {
+        this.armorModelEnum = armorModelEnum;
+        this.correspondingSlot = slot;
+    }
+
+    @SuppressWarnings("unchecked")
+    protected <A> A getArmorModel() {
+        return (A) (armorModelEnum.getSlot() == correspondingSlot ? armorModelEnum.getCorrespondingArmorSlotModel() : armorModelEnum.getOtherArmorSlotModel());
     }
 }

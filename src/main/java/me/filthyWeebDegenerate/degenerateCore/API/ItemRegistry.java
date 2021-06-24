@@ -2,6 +2,7 @@ package me.filthyWeebDegenerate.degenerateCore.API;
 
 import me.filthyWeebDegenerate.degenerateCore.DegenCore;
 import net.minecraft.block.Block;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -22,7 +23,7 @@ public class ItemRegistry {
         ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, modID);
     }
 
-    protected <I extends Item> RegistryObject<I> registerCustomizedItem(String name, Supplier<I> supplier) {
+    protected <I extends Item> RegistryObject<Item> registerCustomizedItem(String name, Supplier<I> supplier) {
         return ITEMS.register(name, supplier);
     }
 
@@ -31,6 +32,10 @@ public class ItemRegistry {
     }
 
     protected RegistryObject<Item> registerBlockItem(String name, Supplier<BlockItem> supplier) {
+        return ITEMS.register(name, supplier);
+    }
+
+    protected <I extends ArmorItem> RegistryObject<ArmorItem> registerArmorItem(String name, Supplier<I> supplier) {
         return ITEMS.register(name, supplier);
     }
 
@@ -44,7 +49,5 @@ public class ItemRegistry {
         });
     }
 
-    public void register(IEventBus bus) {;
-        ITEMS.register(bus);
-    }
+    public void register() {}
 }
