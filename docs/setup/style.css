@@ -1,3 +1,11 @@
-body > code {
+body > div > p {
     color: red;
+}
+
+body > div > h2 {
+    color: blue;
+}
+
+body > div > h3 {
+    color: crimson;
 }
