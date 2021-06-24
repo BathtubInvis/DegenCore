@@ -1,1 +1,1 @@
-# DegenerateCore documentation
+# DegenerateCore documentation :)
