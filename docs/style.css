@@ -8,6 +8,11 @@ body>div>h1 {
     color: red;
 }
 
+body>div.box_ {
+    border-style: outset;
+    border-color: black;
+}
+
 body>div>div>a {
     font-family: Helvetica, sans-serif;
     color: aqua;
