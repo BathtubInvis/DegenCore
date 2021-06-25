@@ -8,12 +8,16 @@ body>div>h1 {
     color: red;
 }
 
-body>div>h1.box_outset {
-    border-style: outset;
-    border-color: black;
+body>div>div>a {
+    text-align: center;
 }
 
-body>div>div>a {
+body>div>div>a:visited {
+    font-family: Helvetica, sans-serif;
+    color: aqua;
+}
+
+body>div>div>a:link {
     font-family: Helvetica, sans-serif;
     color: aqua;
 }
