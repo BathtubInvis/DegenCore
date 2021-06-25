@@ -8,7 +8,7 @@ body>div>h1 {
     color: red;
 }
 
-body>div.box_ {
+body>div>h1.box_outset {
     border-style: outset;
     border-color: black;
 }
