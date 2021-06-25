@@ -1,6 +1,5 @@
 body {
-    background-color: green;
-    opacity: 0.4;
+    background-image: url("assets/backgrounds/HomePageBackGround.png");
 }
 
 body>div>h1 {
